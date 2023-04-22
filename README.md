@@ -57,8 +57,8 @@ const { getAllMovies, getMovie, getMovieQuote } = require("welington-sdk");
 ## Environment variables
 An .env should be set in root with the following variables:
 ```
-API_URL='https://the-one-api.dev/v2'
-API_KEY='your-api-key'
+API_URL=https://the-one-api.dev/v2
+API_KEY=your-api-key
 ```
 
 ## API Key

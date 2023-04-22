@@ -25,7 +25,7 @@ export class MovieHttpClient implements MovieClient {
         offset,
       };
     } catch (error) {
-      throw new SdkError('Error on get all movies');
+      throw new SdkError(`Error on get all movies: ${error}`);
     }
   }
 
@@ -34,7 +34,7 @@ export class MovieHttpClient implements MovieClient {
       const { docs } = await this.httpClient.get<Page<MovieDto>>(`movie/${id}`);
       return docs.length ? MovieDto.toMovieEntity(docs[0]) : null;
     } catch (error) {
-      throw new SdkError('Error on get one movie');
+      throw new SdkError(`Error on get one movie: ${error}`);
     }
   }
 
@@ -55,7 +55,7 @@ export class MovieHttpClient implements MovieClient {
         offset,
       };
     } catch (error) {
-      throw new SdkError('Error on get movie quotes');
+      throw new SdkError(`Error on get movie quotes: ${error}`);
     }
   }
 }

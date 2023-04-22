@@ -12,5 +12,7 @@ module.exports = {
   ],
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
-  //setupFiles: ["<rootDir>/src/config/test/setup-int-test.ts"],
+  setupFiles: [
+    "<rootDir>/dotenv-config.js"
+  ],
 };
